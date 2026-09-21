@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 280px; font-family: system-ui, sans-serif; padding: 12px; }
+  input { width: 100%; box-sizing: border-box; padding: 6px; margin: 6px 0; }
+  button { padding: 6px 12px; cursor: pointer; }
+  small { color: #666; display: block; margin-top: 6px; }
+  #ok { color: green; margin-left: 8px; }
+</style>
+</head>
+<body>
+  <b>Names to react to</b>
+  <input id="names" placeholder="paul, pavlo, павло, павл">
+  <button id="save">Save</button><span id="ok"></span>
+  <small>Comma-separated. Matches from the start of a word ("павл" catches Павле, Павлу). No tab reload needed.</small>
+  <script src="popup.js"></script>
+</body>
+</html>

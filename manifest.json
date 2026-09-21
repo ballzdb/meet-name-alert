@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Meet Name Alert",
+  "version": "1.1",
+  "description": "Alerts you when someone says your name in Google Meet captions.",
+  "permissions": ["notifications", "storage"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Meet Name Alert" },
+  "icons": { "128": "icon.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
